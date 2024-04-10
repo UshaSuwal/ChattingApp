@@ -43,12 +43,18 @@
     overflow-x: hidden;
     overflow-y: scroll;
     margin-bottom: 55px;
+    padding-right: 15px;
   }
+
+
+  
   #chatroom_container {
     height: 100vh;
     margin-right: 0px !important;
     overflow-x: hidden;
     overflow-y: hidden;
+    margin-left: 20px;
+    
   }
   
   .msg-content {
@@ -65,3 +71,29 @@
     background-color: #555555;
     padding: 10px;
   }
+
+  .custom-width {
+    display: flex;
+    width: 80%;
+  }
+
+
+  #users {
+    background-color: #4a90e2; 
+    padding: 10px 15px; 
+    display: inline-block; 
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#users a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+#users:hover {
+    background-color: #357bd8; 
+}

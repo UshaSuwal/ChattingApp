@@ -67,3 +67,8 @@ group :test do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.3'
+
+gem "image_processing", ">= 1.2"
+
+
+gem 'profanity_filter', '~> 0.1.1'
