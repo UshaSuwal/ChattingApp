@@ -2,7 +2,7 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :room
   after_create_commit { broadcast_append_to room }
-  before_create :confirm_participant, :body
+  before_create :confirm_participant, :bodychange
   # profanity_filter! :body, method: 'vowels'
 
   private
@@ -11,7 +11,7 @@ class Message < ApplicationRecord
     is_participant = Participant.where(user_id: user.id, room_id: room.id).first
     throw :abort unless is_participant
   end
-  def body
+  def bodychange
     if !room.is_private
       ProfanityFilter::Base.clean(read_attribute(:body), "hollow")
     end
